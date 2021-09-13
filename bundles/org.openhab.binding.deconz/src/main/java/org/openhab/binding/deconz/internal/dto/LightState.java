@@ -52,7 +52,7 @@ public class LightState {
      * @param o state to compare with
      * @return true if equal
      */
-    public boolean equalsIgnoreNull(LightState o) {
+    public <A extends LightState> boolean equalsIgnoreNull(A o) {
         return equalsIgnoreNull(on, o.on) && equalsIgnoreNull(bri, o.bri) && equalsIgnoreNull(hue, o.hue)
                 && equalsIgnoreNull(sat, o.sat) && ((xy != null && o.xy != null) ? Arrays.equals(xy, o.xy) : true);
     }
@@ -79,7 +79,7 @@ public class LightState {
         transitiontime = null;
     }
 
-    private <T> boolean equalsIgnoreNull(T o1, T o2) {
+    protected <T> boolean equalsIgnoreNull(T o1, T o2) {
         return (o1 != null && o2 != null) ? o1.equals(o2) : true;
     }
 

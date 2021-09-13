@@ -31,12 +31,11 @@ public class LightMessage extends DeconzBaseMessage {
 
     public @Nullable LightState state;
 
+    public @Nullable WindowCoveringState windowCoveringState;
+
     @Override
     public String toString() {
-        return "LightMessage{" + "hascolor=" + hascolor + ", ctmax=" + ctmax + ", ctmin=" + ctmin + ", type=" + type
-                + ", state=" + state + ", e='" + e + '\'' + ", r='" + r + '\'' + ", t='" + t + '\'' + ", id='" + id
-                + '\'' + ", manufacturername='" + manufacturername + '\'' + ", modelid='" + modelid + '\'' + ", name='"
-                + name + '\'' + ", swversion='" + swversion + '\'' + ", ep='" + ep + '\'' + ", uniqueid='" + uniqueid
-                + '\'' + '}';
+        return "LightMessage [ctmax=" + ctmax + ", ctmin=" + ctmin + ", hascolor=" + hascolor + ", state=" + state
+                + ", type=" + type + ", windowCoveringState=" + windowCoveringState + "]";
     }
 }
